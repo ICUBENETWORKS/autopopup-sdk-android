@@ -102,7 +102,7 @@ public interface AutoPopupCallbackListener {
 }
 ```
 
-* `autoPopupSuccess(link)`: 알림까지 처리했을 때 호출됩니다. `link`는 알림을 눌렀을 때 열리는 주소입니다.
+* `autoPopupSuccess(link)`: 알림까지 처리했을 때 호출됩니다. `link`는 메시지에 지정된 링크입니다(SDK 1.1.0에서 권한이 없을 때는 첫 번째 카드의 이미지 링크).
 * `autoPopupFail(errorCode)`: 팝콘메시지를 표시하지 않았을 때 호출됩니다.
 
 상황별로 받는 결과는 아래와 같습니다.

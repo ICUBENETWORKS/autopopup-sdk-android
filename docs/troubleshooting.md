@@ -30,7 +30,7 @@
 ### 광고가 표시되지 않음
 
 * 관리자 앱 상세에서 광고 동의 상태를 확인합니다.
-* 다른 앱 위에 표시 권한이 없어 알림으로 받은 메시지에는 광고가 붙지 않습니다.
+* 다른 앱 위에 표시 권한이 없으면 화면 위 아이콘과 광고 화면이 표시되지 않습니다. 권한이 없는 상태로 알림을 누르면 메시지 링크만 열립니다.
 
 ### 같은 메시지가 두 번 표시됨
 
@@ -60,7 +60,7 @@ Firebase Messaging 라이브러리가 없거나 버전이 충돌합니다. `fire
 Android 13 이상에서 알림 권한(`POST_NOTIFICATIONS`)을 받았는지 확인합니다.
 
 > [!NOTE]
-> 오류 코드 전체는 [API 레퍼런스](reference/api.md)에 있습니다. 원인을 찾을 때는 Logcat에서 `AUTOPOPUP_SDK`와 `AutoPopupRepository`로 검색합니다.
+> 오류 코드 전체는 [API 레퍼런스](reference/api.md)에 있습니다. 원인을 찾을 때는 Logcat에서 `AUTOPOPUP_SDK`로 검색합니다.
 
 ## 자주 묻는 질문
 
@@ -84,4 +84,4 @@ Android 13 이상에서 알림 권한(`POST_NOTIFICATIONS`)을 받았는지 확�
 * 앱 패키지명
 * 기기 모델과 Android 버전
 * 문제가 생긴 시각
-* Logcat 로그(`AUTOPOPUP_SDK`, `AutoPopupRepository`로 거른 내용)
+* Logcat 로그(`AUTOPOPUP_SDK`로 거른 내용)
