@@ -1,43 +1,52 @@
-# AutoPopup SDK for Android
+# AutoPopup SDK for Android (POPCON SDK)
 
-AutoPopup SDK 의 **배포 전용 저장소**입니다. 소스 코드는 포함하지 않으며, 빌드된 AAR 이 [GitHub Packages](../../packages) 로 배포됩니다.
+POPCON SDK(AutoPopup SDK)의 **배포 전용 저장소**입니다. 소스 코드는 포함하지 않으며, 빌드된 AAR을 토큰 없이 받을 수 있는 Maven 저장소로 배포합니다.
+
+## 연동 가이드
+
+전체 연동 방법은 **[POPCON SDK 연동 가이드](docs/README.md)** 를 참고하세요.
+
+- [1. 연동 준비](docs/getting-started/quick-start.md)
+- [2. SDK 설치와 초기화](docs/integrate/install-and-init.md)
+- [3. 팝콘메시지 수신 설정](docs/integrate/README.md)
+- [7. 문제 해결](docs/troubleshooting.md)
+- [8. API 레퍼런스](docs/reference/api.md)
+- [9. 릴리스 노트](docs/reference/release-notes.md)
 
 ## 설치
 
-### 1. GitHub 토큰 준비
-GitHub Packages 의 Maven 저장소는 공개 패키지라도 내려받을 때 인증이 필요합니다. **아무 GitHub 계정**으로 `read:packages` 권한의 Personal access token (classic) 을 발급하세요. (조직 권한은 필요 없습니다.)
+### 1. 저장소 추가 (`settings.gradle`)
 
-`~/.gradle/gradle.properties` (프로젝트에 커밋하지 마세요):
-```properties
-gpr.user=<GitHub 사용자명>
-gpr.key=<read:packages 토큰>
-```
+별도 계정이나 토큰 없이 받을 수 있습니다.
 
-### 2. 저장소 추가 (`settings.gradle`)
 ```groovy
 dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url = uri("https://maven.pkg.github.com/ICUBENETWORKS/autopopup-sdk-android")
-            credentials {
-                username = providers.gradleProperty("gpr.user").getOrElse(System.getenv("GPR_USER") ?: "")
-                password = providers.gradleProperty("gpr.key").getOrElse(System.getenv("GPR_TOKEN") ?: "")
-            }
-        }
+        maven { url 'https://icubenetworks.github.io/autopopup-sdk-android/maven' }
     }
 }
 ```
 
-### 3. 의존성 추가 (`app/build.gradle`)
+### 2. 의존성 추가 (`app/build.gradle`)
+
 ```groovy
 dependencies {
-    implementation 'com.icubeon:autopopup-sdk:1.0.8'
+    implementation 'com.icubeon:autopopup-sdk:1.1.0'
 }
 ```
+
+SDK가 사용하는 라이브러리는 함께 설치되므로 따로 선언하지 않아도 됩니다.
 
 ## 버전
 | 버전 | 주요 변경 |
 |---|---|
-| 1.0.8 | 기기 식별자(AAID / SDK 공유 AppId) 등록 전송, Type 5 아이콘 닫기 버튼, Type 4/5 최초 탭 시 호스트 앱 실행, 다른 앱 위에 표시 권한이 없을 때 알림만 표시 |
+| 1.1.0 | 토큰 없이 받는 배포 저장소, 광고 스플래시 전체화면, 메시지 광고 정보(스플래시·배너) 수신 |
+| 1.0.8 | 기기 식별자(광고 ID / 서비스 식별자) 등록 전송, 아이콘 닫기 버튼, 아이콘·배너 최초 탭 시 앱 실행, 다른 앱 위에 표시 권한이 없을 때 알림으로 표시 |
+
+자세한 내용은 [릴리스 노트](docs/reference/release-notes.md)를 참고하세요.
+
+## 문의
+
+[popcon@popcon.biz](mailto:popcon@popcon.biz)
