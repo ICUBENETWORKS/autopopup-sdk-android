@@ -1,6 +1,6 @@
 # AutoPopup SDK for Android (POPCON SDK)
 
-POPCON SDK(AutoPopup SDK)의 **배포 전용 저장소**입니다. 소스 코드는 포함하지 않으며, 빌드된 AAR을 토큰 없이 받을 수 있는 Maven 저장소로 배포합니다.
+POPCON SDK(AutoPopup SDK)의 **배포 전용 저장소**입니다.
 
 ## 연동 가이드
 
