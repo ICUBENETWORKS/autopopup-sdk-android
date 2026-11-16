@@ -25,7 +25,7 @@ maven("https://icubenetworks.github.io/autopopup-sdk-android/maven")
 #### 2. 의존성 버전을 바꿉니다.
 
 ```gradle
-implementation 'com.icubeon:autopopup-sdk:1.1.0'
+implementation 'com.icubeon:autopopup-sdk:1.1.1'
 ```
 
 #### 3. SDK 때문에 넣어 둔 라이브러리를 정리합니다.
@@ -38,7 +38,7 @@ SDK를 AAR 파일로 넣으면서 Retrofit, Glide, Lottie 등을 앱에 직접 �
 
 ## 버전별로 바꿔야 하는 코드
 
-1.0.6부터 1.1.0까지 바꿔야 하는 코드는 없습니다.
+1.0.6부터 1.1.1까지 바꿔야 하는 코드는 없습니다.
 
 ## 지원 기간
 

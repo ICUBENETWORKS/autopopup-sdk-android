@@ -1,6 +1,6 @@
 # 8. API 레퍼런스
 
-SDK 1.1.0 기준입니다. 클래스는 모두 `com.icubeon.autopopup` 패키지에 있습니다.
+SDK 1.1.1 기준입니다. 클래스는 모두 `com.icubeon.autopopup` 패키지에 있습니다.
 
 ## AutoPopupManager
 

@@ -40,7 +40,7 @@ dependencyResolutionManagement {
 
 ```gradle
 dependencies {
-    implementation 'com.icubeon:autopopup-sdk:1.1.0'
+    implementation 'com.icubeon:autopopup-sdk:1.1.1'
 
     implementation platform('com.google.firebase:firebase-bom:33.16.0')
     implementation 'com.google.firebase:firebase-messaging'
@@ -51,7 +51,7 @@ dependencies {
 
 ```kotlin
 dependencies {
-    implementation("com.icubeon:autopopup-sdk:1.1.0")
+    implementation("com.icubeon:autopopup-sdk:1.1.1")
 
     implementation(platform("com.google.firebase:firebase-bom:33.16.0"))
     implementation("com.google.firebase:firebase-messaging")
