@@ -33,7 +33,7 @@ dependencyResolutionManagement {
 
 ```groovy
 dependencies {
-    implementation 'com.icubeon:autopopup-sdk:1.1.0'
+    implementation 'com.icubeon:autopopup-sdk:1.1.1'
 }
 ```
 
@@ -42,6 +42,7 @@ SDK가 사용하는 라이브러리는 함께 설치되므로 따로 선언하�
 ## 버전
 | 버전 | 주요 변경 |
 |---|---|
+| 1.1.1 | 2026-11-16 배포 |
 | 1.1.0 | 토큰 없이 받는 배포 저장소, 광고 스플래시 전체화면, 메시지 광고 정보(스플래시·배너) 수신 |
 | 1.0.8 | 기기 식별자(광고 ID / 서비스 식별자) 등록 전송, 아이콘 닫기 버튼, 아이콘·배너 최초 탭 시 앱 실행, 다른 앱 위에 표시 권한이 없을 때 알림으로 표시 |
 
